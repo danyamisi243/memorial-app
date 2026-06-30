@@ -3,6 +3,11 @@
     "name": "Mémorial App",
     "slug": "memorial-app",
     "owner": "danicoa",
+    "extra": {
+      "eas": {
+        "projectId": "6757921f-c721-4d75-83ef-86551fcecb3a"
+      }
+    },
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
