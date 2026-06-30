@@ -80,3 +80,6 @@ Pour créer un fichier APK autonome que vous pourrez installer sur n'importe que
 ---
 
 **Note importante :** Pour la publication sur le Google Play Store, il est recommandé de générer un AAB (`Android App Bundle`) plutôt qu'un APK. La commande `eas build` générera par défaut un AAB. Si vous avez besoin d'un APK pour des tests, assurez-vous de bien vérifier les options de téléchargement sur la page de build d'EAS.
+
+---
+*Dernière mise à jour : Build final lancé avec Keystore configurée.*
