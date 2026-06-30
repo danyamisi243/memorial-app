@@ -26,7 +26,9 @@ jobs:
 
       - name: Build Android app
         run: |
-          eas build --platform android --profile preview --non-interactive
+          # Tentative d'initialisation silencieuse du projet
+          eas build --platform android --profile preview --non-interactive || \
+          (eas project:init --non-interactive && eas build --platform android --profile preview --non-interactive)
         env:
           EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
 
