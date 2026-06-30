@@ -18,17 +18,16 @@ jobs:
         with:
           node-version: 18.x
 
-      - name: Install Expo CLI and EAS CLI
-        run: npm install -g expo-cli eas-cli
+      - name: Install EAS CLI
+        run: npm install -g eas-cli
 
       - name: Install dependencies
         run: npm install
 
-      - name: Login to Expo
-        run: eas login --token ${{ secrets.EXPO_TOKEN }}
-
       - name: Build Android app
-        run: eas build --platform android --profile production
+        run: eas build --platform android --profile production --non-interactive
+        env:
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
 
       - name: Upload Android artifact
         uses: actions/upload-artifact@v4
